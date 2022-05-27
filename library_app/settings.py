@@ -141,7 +141,7 @@ REST_FRAMEWORK = {
 
 
 }
-
+import os
 from datetime import timedelta
 
 SIMPLE_JWT = {
@@ -152,7 +152,7 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': False,
 
     'ALGORITHM': 'HS256',
-    'SIGNING_KEY': SECRET_KEY,
+    'SIGNING_KEY': os.environ['SECRET_KEY_TOKEN'],
     'VERIFYING_KEY': None,
     'AUDIENCE': None,
     'ISSUER': None,
@@ -186,3 +186,7 @@ SPECTACULAR_SETTINGS = {
 
 import django_heroku
 django_heroku.settings(locals())
+
+
+ 
+
