@@ -1,0 +1,9 @@
+djangorestframework-simplejwt
+django==3.2.0
+djangorestframework
+psycopg2-binary==2.9.3
+django-filter
+drf-spectacular
+pytest==7.1.1
+pytest-cov
+pytest-django==3.7.0
