@@ -183,3 +183,6 @@ SPECTACULAR_SETTINGS = {
     'SERVE_INCLUDE_SCHEMA': False,
     # OTHER SETTINGS
 }
+
+import django_heroku
+django_heroku.settings(locals())

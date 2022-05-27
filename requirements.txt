@@ -7,3 +7,4 @@ drf-spectacular
 pytest==7.1.1
 pytest-cov
 pytest-django==3.7.0
+django-heroku
