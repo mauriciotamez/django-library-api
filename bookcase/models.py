@@ -7,7 +7,7 @@ import uuid
 # Create your models here.
 
 class Rack(models.Model):
-    rack_id = models.UUIDField(default=uuid.uuid4, editable=False, max_length=36)
+    rack_id = models.UUIDField(default=uuid.uuid4,  max_length=36)
     name = models.CharField(max_length=100)
     def __str__(self):
         return self.name    
