@@ -5,7 +5,7 @@ import uuid
 class Book(models.Model):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
-    book_id = models.UUIDField(default=uuid.uuid4())
+    book_id = models.UUIDField(default=uuid.uuid4, editable=False, max_length=36)
     genre = models.CharField(max_length=100)
     description = models.TextField(max_length=1000)
     date_of_publication = models.DateField(null=True, blank=True)
