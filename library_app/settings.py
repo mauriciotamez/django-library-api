@@ -143,7 +143,7 @@ REST_FRAMEWORK = {
 }
 import os
 from datetime import timedelta
-
+my_secret = (os.environ.get("SECRET_KEY_TOKEN", 'dev default value'))
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(hours=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
@@ -152,7 +152,7 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': False,
 
     'ALGORITHM': 'HS256',
-    'SIGNING_KEY': os.environ['SECRET_KEY_TOKEN'],
+    'SIGNING_KEY': my_secret,
     'VERIFYING_KEY': None,
     'AUDIENCE': None,
     'ISSUER': None,
