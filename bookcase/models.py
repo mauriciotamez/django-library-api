@@ -12,7 +12,6 @@ class Rack(models.Model):
     def __str__(self):
         return self.name    
 class BookItem(models.Model):
-    
     rack = models.ForeignKey(Rack, on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE, null=True)
     current_owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
